@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
@@ -23,14 +24,19 @@ class AuthController extends Controller
         $request->validate([
             "name" => "required|string",
             "email" => "required|string|email|unique:users",
-            "password" => "required|string"
+            "password" => "required|string",
+            "role" => "required|string"
         ]);
         $user = new User([
             "name" => $request->name,
             "email" => $request->email,
-            "password" => bcrypt($request->password)
+            "password" => bcrypt($request->password),
         ]);
-        $user->save();
+        $role = Role::where('name', $request->role)->first();
+        if ($role && $user) {
+            $user->save();
+            $user->roles()->sync([$role->id]);
+        }
 
         $message["success"] = "User Created Successfully";
        
