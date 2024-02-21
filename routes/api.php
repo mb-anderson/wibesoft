@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
@@ -26,3 +27,9 @@ Route::group(["prefix" => "auth"], function () {
 });
 
 Route::post('/roles', [RoleController::class, 'store']);
+Route::group(["prefix" => "task"], function () {
+    Route::middleware("auth:api")->put("/store", [TaskController::class, 'store']);
+    Route::middleware("auth:api")->post("/{task_id}", [TaskController::class, 'update']);
+    Route::middleware("auth:api")->delete("/{task_id}", [TaskController::class, 'destroy']);
+
+});
