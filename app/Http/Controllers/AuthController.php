@@ -39,7 +39,7 @@ class AuthController extends Controller
         }
 
         $message["success"] = "User Created Successfully";
-       
+
         return response()->json([
             "message" => $message
         ], 201);
@@ -65,15 +65,18 @@ class AuthController extends Controller
         $credentials = request(["email", "password"]);
 
         if (Auth::attempt($credentials)) {
+            /**
+             * @var User $user
+             */
             $user = Auth::user();
-            $message["token"] = $user->createToken("WibeSoft")->accessToken;
+            $message["token"] = $user?->createToken("WibeSoft")->accessToken;
             $message["token_type"] = "Bearer";
             $message["exipires_at"] = Carbon::parse(Carbon::now()->addWeeks(1))->toDateTimeString();
             $message["success"] = "Login Successfull";
 
             return response()->json(["message" => $message], $this->successStatus);
         } else {
-            return response()->json(["error" => "Unauthorised"], 401);
+            return response()->json(["error" => "Unauthorized"], 401);
         }
     }
 }
