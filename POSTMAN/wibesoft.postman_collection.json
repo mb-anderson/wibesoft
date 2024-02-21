@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "438208c7-55ba-439f-b59f-98e6c652c316",
+		"name": "wibesoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31963215"
+	},
+	"item": [
+		{
+			"name": "task_store_admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWRmZTJmNDVkNzA2ZDJlNWQzNjY2YjI2ZWJjODc3ZTExNzljZDQ1NWE0ZDM5MzBjYWMzODFhNjkwNTNjYjMyMTBiOTdiMDlmMTVhZGJhNzgiLCJpYXQiOjE3MDg0NzEyOTAuMDU1OTM1LCJuYmYiOjE3MDg0NzEyOTAuMDU1OTM5LCJleHAiOjE3NDAwOTM2OTAuMDUxMzg4LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.I7pB3VIWxd3zQJ6xh8_sHde8a_mb8N0iIAaBAUrY3y7YVS9SIHo-3FJZXdf9UOm0l339nze-hPs-tu2g3bxKOJEP0cGjJtCWazKVBWPIzJOBty3VaD82gdRY5ETpDwCJBLQcJkzkC9CGkBIOCqegpKkNRS2ra7EUE8_RWOYMNFmdjeCD86hAgaAfKw9sjrM81aHW8ESZEEomclt0r68OC9HzvwRIeQfNoWZycb9uxjS-I2DecBFKiycOv4wx6AqT6pyLcaD9ziaW3STGr2TiOsCmwpnBuefE0WmtNBqKBKY95yu92ohJPQ9BDjb-RuCUjppsEs-OtyNmzji2GL5j9eHKpde5E6yf2Qzff_TyAWqURp0r_BB_EPCWmReKB_zvuRYGI-OdySJ9yQGOSpLgTI1iK8fDoyAFk9Zk7BOkl9L-bNtFQPErArGYEDfT9QOabRuuSr5o4AKJ1YPHSsRdoqdk6j-TfBQXM-lBXIxJuD3iMsFHwZo8AT1wef7Z1VOTlS2Xa4OTLpoGyHkt1uYtCo3myLp2YhnZUnhKph1uEH_25qzNfArSw0JP845sjpRUijMjxpDQKatttyHoCDCFHBQDvnFX6fMGimHefE2Mksn9xNEHvhNF6A6Q4Jr5Ce2LTkusZ16mOPkmD4JjsHPij7NOgYKf6AhGBv14Iu_LDbU"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "deneme34",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "denemekonu",
+							"type": "text"
+						},
+						{
+							"key": "task_date",
+							"value": "2023-12-08",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "TODO",
+							"type": "text"
+						},
+						{
+							"key": "users[0]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "users[1]",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/task/store"
+			},
+			"response": []
+		},
+		{
+			"name": "task_store_user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRmZjYzNWEwYzA3ZDRlZDU4YmNjNTk3NmFhNWU5NmI4MjJhODFmN2YzYzE3N2U3NjViOGZjNGFjMTUyZWNhZDM1ZjNjYmFlYjliMjUyNzgiLCJpYXQiOjE3MDg1MjEyOTEuODY4NjM3LCJuYmYiOjE3MDg1MjEyOTEuODY4NjQxLCJleHAiOjE3NDAxNDM2OTEuODYzMjU5LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.PXGQtovn9K5Lsgb-f3wFCemzGFnsSq5GtQSnAE-0RQ2vGo7-EsOtj2tBvm4pEo6twSS1BVv1_XgvaSjsNyUZ4AghW93lwaYy9hEoxZ--t7whF5EXoyfPWRiKugarYUFU_Cg5JA1QI90nwdJade_ce-Lm1g-atOtVbE3Ga3XRSAIrLsuMw5sgkX6M3SLwF-sE0GnaT_xNQ2_5xyFbsStFj0aKMcjkaJ5lXzvJQYQbxggrayVdnX5ZJPva2atgIbFOpM-cYXHmW4eeEH9CiANumsukZw2cHSvsOh-ycO82YY7aYy-apwUq5B6LYQ5RvshaZBxtK5IgOkUxXYa-QzTnj87PoB_api9JGF6wTDWF4xqVIRz3lVJ9-nV5jPJWIL0qX7MA12_qkrVjmTKu7OAaBpyyMDtawc2GJGxxLV7fBEvihpZ2MY7CaDrRNrvTUiBLWkrdEZ85HPi3FXeSxEe6QlyrONBGAhRGuzdNxTIe245ch0ad9Pn1SwtMujTjl5UlP5uDoJbJjJ3yHJX_aY-PWlKLcyMIk8ki0RYKxXxLreRh6R5DLEcOTYIZ5V1qAE_Fg_iskEcITJOY-zhRpqUixLGZjuOT5ORLBVtCaKt3HQ2ve9cy8fzK9FLDOkG1PxOSJehmalHLXeJ5Q2cnL8AaBaCLPAURtn-d9vCFNDXT6YU"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "deneme34",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "denemekonu",
+							"type": "text"
+						},
+						{
+							"key": "task_date",
+							"value": "2023-12-08",
+							"type": "text"
+						},
+						{
+							"key": "users[0]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "users[1]",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/task/store"
+			},
+			"response": []
+		},
+		{
+			"name": "task_update_admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWRmZTJmNDVkNzA2ZDJlNWQzNjY2YjI2ZWJjODc3ZTExNzljZDQ1NWE0ZDM5MzBjYWMzODFhNjkwNTNjYjMyMTBiOTdiMDlmMTVhZGJhNzgiLCJpYXQiOjE3MDg0NzEyOTAuMDU1OTM1LCJuYmYiOjE3MDg0NzEyOTAuMDU1OTM5LCJleHAiOjE3NDAwOTM2OTAuMDUxMzg4LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.I7pB3VIWxd3zQJ6xh8_sHde8a_mb8N0iIAaBAUrY3y7YVS9SIHo-3FJZXdf9UOm0l339nze-hPs-tu2g3bxKOJEP0cGjJtCWazKVBWPIzJOBty3VaD82gdRY5ETpDwCJBLQcJkzkC9CGkBIOCqegpKkNRS2ra7EUE8_RWOYMNFmdjeCD86hAgaAfKw9sjrM81aHW8ESZEEomclt0r68OC9HzvwRIeQfNoWZycb9uxjS-I2DecBFKiycOv4wx6AqT6pyLcaD9ziaW3STGr2TiOsCmwpnBuefE0WmtNBqKBKY95yu92ohJPQ9BDjb-RuCUjppsEs-OtyNmzji2GL5j9eHKpde5E6yf2Qzff_TyAWqURp0r_BB_EPCWmReKB_zvuRYGI-OdySJ9yQGOSpLgTI1iK8fDoyAFk9Zk7BOkl9L-bNtFQPErArGYEDfT9QOabRuuSr5o4AKJ1YPHSsRdoqdk6j-TfBQXM-lBXIxJuD3iMsFHwZo8AT1wef7Z1VOTlS2Xa4OTLpoGyHkt1uYtCo3myLp2YhnZUnhKph1uEH_25qzNfArSw0JP845sjpRUijMjxpDQKatttyHoCDCFHBQDvnFX6fMGimHefE2Mksn9xNEHvhNF6A6Q4Jr5Ce2LTkusZ16mOPkmD4JjsHPij7NOgYKf6AhGBv14Iu_LDbU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "deneme34",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "denemekonu",
+							"type": "text"
+						},
+						{
+							"key": "task_date",
+							"value": "2023-12-08",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "INPROGRESS",
+							"type": "text"
+						},
+						{
+							"key": "users[0]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "users[1]",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/task/6"
+			},
+			"response": []
+		},
+		{
+			"name": "task_update_user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRmZjYzNWEwYzA3ZDRlZDU4YmNjNTk3NmFhNWU5NmI4MjJhODFmN2YzYzE3N2U3NjViOGZjNGFjMTUyZWNhZDM1ZjNjYmFlYjliMjUyNzgiLCJpYXQiOjE3MDg1MjEyOTEuODY4NjM3LCJuYmYiOjE3MDg1MjEyOTEuODY4NjQxLCJleHAiOjE3NDAxNDM2OTEuODYzMjU5LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.PXGQtovn9K5Lsgb-f3wFCemzGFnsSq5GtQSnAE-0RQ2vGo7-EsOtj2tBvm4pEo6twSS1BVv1_XgvaSjsNyUZ4AghW93lwaYy9hEoxZ--t7whF5EXoyfPWRiKugarYUFU_Cg5JA1QI90nwdJade_ce-Lm1g-atOtVbE3Ga3XRSAIrLsuMw5sgkX6M3SLwF-sE0GnaT_xNQ2_5xyFbsStFj0aKMcjkaJ5lXzvJQYQbxggrayVdnX5ZJPva2atgIbFOpM-cYXHmW4eeEH9CiANumsukZw2cHSvsOh-ycO82YY7aYy-apwUq5B6LYQ5RvshaZBxtK5IgOkUxXYa-QzTnj87PoB_api9JGF6wTDWF4xqVIRz3lVJ9-nV5jPJWIL0qX7MA12_qkrVjmTKu7OAaBpyyMDtawc2GJGxxLV7fBEvihpZ2MY7CaDrRNrvTUiBLWkrdEZ85HPi3FXeSxEe6QlyrONBGAhRGuzdNxTIe245ch0ad9Pn1SwtMujTjl5UlP5uDoJbJjJ3yHJX_aY-PWlKLcyMIk8ki0RYKxXxLreRh6R5DLEcOTYIZ5V1qAE_Fg_iskEcITJOY-zhRpqUixLGZjuOT5ORLBVtCaKt3HQ2ve9cy8fzK9FLDOkG1PxOSJehmalHLXeJ5Q2cnL8AaBaCLPAURtn-d9vCFNDXT6YU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "deneme34",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "denemekonu",
+							"type": "text"
+						},
+						{
+							"key": "task_date",
+							"value": "2023-12-08",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "TODO",
+							"type": "text"
+						},
+						{
+							"key": "users[0]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "users[1]",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/task/6"
+			},
+			"response": []
+		},
+		{
+			"name": "task_destroy_admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWRmZTJmNDVkNzA2ZDJlNWQzNjY2YjI2ZWJjODc3ZTExNzljZDQ1NWE0ZDM5MzBjYWMzODFhNjkwNTNjYjMyMTBiOTdiMDlmMTVhZGJhNzgiLCJpYXQiOjE3MDg0NzEyOTAuMDU1OTM1LCJuYmYiOjE3MDg0NzEyOTAuMDU1OTM5LCJleHAiOjE3NDAwOTM2OTAuMDUxMzg4LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.I7pB3VIWxd3zQJ6xh8_sHde8a_mb8N0iIAaBAUrY3y7YVS9SIHo-3FJZXdf9UOm0l339nze-hPs-tu2g3bxKOJEP0cGjJtCWazKVBWPIzJOBty3VaD82gdRY5ETpDwCJBLQcJkzkC9CGkBIOCqegpKkNRS2ra7EUE8_RWOYMNFmdjeCD86hAgaAfKw9sjrM81aHW8ESZEEomclt0r68OC9HzvwRIeQfNoWZycb9uxjS-I2DecBFKiycOv4wx6AqT6pyLcaD9ziaW3STGr2TiOsCmwpnBuefE0WmtNBqKBKY95yu92ohJPQ9BDjb-RuCUjppsEs-OtyNmzji2GL5j9eHKpde5E6yf2Qzff_TyAWqURp0r_BB_EPCWmReKB_zvuRYGI-OdySJ9yQGOSpLgTI1iK8fDoyAFk9Zk7BOkl9L-bNtFQPErArGYEDfT9QOabRuuSr5o4AKJ1YPHSsRdoqdk6j-TfBQXM-lBXIxJuD3iMsFHwZo8AT1wef7Z1VOTlS2Xa4OTLpoGyHkt1uYtCo3myLp2YhnZUnhKph1uEH_25qzNfArSw0JP845sjpRUijMjxpDQKatttyHoCDCFHBQDvnFX6fMGimHefE2Mksn9xNEHvhNF6A6Q4Jr5Ce2LTkusZ16mOPkmD4JjsHPij7NOgYKf6AhGBv14Iu_LDbU"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://127.0.0.1:8000/api/task/5"
+			},
+			"response": []
+		},
+		{
+			"name": "task_destroy_user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRmZjYzNWEwYzA3ZDRlZDU4YmNjNTk3NmFhNWU5NmI4MjJhODFmN2YzYzE3N2U3NjViOGZjNGFjMTUyZWNhZDM1ZjNjYmFlYjliMjUyNzgiLCJpYXQiOjE3MDg1MjEyOTEuODY4NjM3LCJuYmYiOjE3MDg1MjEyOTEuODY4NjQxLCJleHAiOjE3NDAxNDM2OTEuODYzMjU5LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.PXGQtovn9K5Lsgb-f3wFCemzGFnsSq5GtQSnAE-0RQ2vGo7-EsOtj2tBvm4pEo6twSS1BVv1_XgvaSjsNyUZ4AghW93lwaYy9hEoxZ--t7whF5EXoyfPWRiKugarYUFU_Cg5JA1QI90nwdJade_ce-Lm1g-atOtVbE3Ga3XRSAIrLsuMw5sgkX6M3SLwF-sE0GnaT_xNQ2_5xyFbsStFj0aKMcjkaJ5lXzvJQYQbxggrayVdnX5ZJPva2atgIbFOpM-cYXHmW4eeEH9CiANumsukZw2cHSvsOh-ycO82YY7aYy-apwUq5B6LYQ5RvshaZBxtK5IgOkUxXYa-QzTnj87PoB_api9JGF6wTDWF4xqVIRz3lVJ9-nV5jPJWIL0qX7MA12_qkrVjmTKu7OAaBpyyMDtawc2GJGxxLV7fBEvihpZ2MY7CaDrRNrvTUiBLWkrdEZ85HPi3FXeSxEe6QlyrONBGAhRGuzdNxTIe245ch0ad9Pn1SwtMujTjl5UlP5uDoJbJjJ3yHJX_aY-PWlKLcyMIk8ki0RYKxXxLreRh6R5DLEcOTYIZ5V1qAE_Fg_iskEcITJOY-zhRpqUixLGZjuOT5ORLBVtCaKt3HQ2ve9cy8fzK9FLDOkG1PxOSJehmalHLXeJ5Q2cnL8AaBaCLPAURtn-d9vCFNDXT6YU"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://127.0.0.1:8000/api/task/6"
+			},
+			"response": []
+		},
+		{
+			"name": "register_admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mustafa Burak",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "mburakyucel38@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Aa.12345",
+							"type": "default"
+						},
+						{
+							"key": "role",
+							"value": "Admin",
+							"type": "default"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "register_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "TEST USER",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "mburakyucel@hotmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "core_1234",
+							"type": "default"
+						},
+						{
+							"key": "role",
+							"value": "User",
+							"type": "default"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login_as_admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mburakyucel38@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Aa.12345",
+							"type": "default"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "login_as_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mburakyucel@hotmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "core_1234",
+							"type": "default"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/auth/login"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "inherit",
+		"inherit": {}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
