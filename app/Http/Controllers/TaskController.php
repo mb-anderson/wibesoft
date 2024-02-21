@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TaskMail;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class TaskController extends Controller
 {
@@ -26,6 +28,7 @@ class TaskController extends Controller
         if ($user?->hasRole('Admin')) {
             $task = Task::create($request->all());
             $task->users()->sync($request->users);
+            Mail::to($task->getUserEmails())->send(new TaskMail($task, TaskMail::CREATED));
             return response()->json([
                 'message' => 'Task created successfully',
                 'task' => $task,
@@ -56,6 +59,7 @@ class TaskController extends Controller
             if ($task) {
                 $task->update($request->all());
                 $task->users()->sync($request->users);
+                Mail::to($task->getUserEmails())->send(new TaskMail($task, TaskMail::UPDATED));
                 return response()->json([
                     'message' => 'Task updated successfully',
                     'task' => $task,
@@ -70,6 +74,7 @@ class TaskController extends Controller
             $changedData = array_diff_assoc($updatedData, $task->toArray());
             if (!empty($changedData) && count($changedData) < 2) {
                 $task->update(["status" => $request->status]);
+                Mail::to($task->getUserEmails())->send(new TaskMail($task, TaskMail::UPDATED));
                 return response()->json(['message' => 'Status has been updated'], 200);
             }
             return response()->json(['error' => 'You can update just STATUS, Unauthorized'], 403);
@@ -89,6 +94,7 @@ class TaskController extends Controller
             if ($task) {
                 $task_temp = $task;
                 $task->delete();
+                Mail::to($task->getUserEmails())->send(new TaskMail($task, TaskMail::DESTROYED));
                 return response()->json(['message' => 'Task destroyed successfully', "task" => $task], 200);
             } else {
                 return response()->json(['error' => 'Task Not Found'], 404);
